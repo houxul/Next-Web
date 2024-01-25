@@ -21,6 +21,7 @@ const id: PartialLocaleType = {
   Chat: {
     SubTitle: (count: number) => `${count} pesan`,
     Actions: {
+      Voice: "朗读",
       ChatList: "Buka Daftar Chat",
       CompressedHistory: "Ekspor Riwayat Terkompresi",
       Export: "Ekspor Semua Pesan sebagai Markdown",
@@ -369,8 +370,8 @@ const id: PartialLocaleType = {
   },
   Exporter: {
     Description: {
-      Title: "Hanya pesan setelah menghapus konteks yang akan ditampilkan"
-    },  
+      Title: "Hanya pesan setelah menghapus konteks yang akan ditampilkan",
+    },
     Model: "Model",
     Messages: "Pesan",
     Topic: "Topik",

@@ -13,6 +13,7 @@ const jp: PartialLocaleType = {
   Chat: {
     SubTitle: (count: number) => `ChatGPTとの ${count} 通のチャット`,
     Actions: {
+      Voice: "朗读",
       ChatList: "メッセージリストを表示",
       CompressedHistory: "圧縮された履歴プロンプトを表示",
       Export: "チャット履歴をエクスポート",

@@ -13,6 +13,7 @@ const es: PartialLocaleType = {
   Chat: {
     SubTitle: (count: number) => `${count} mensajes con ChatGPT`,
     Actions: {
+      Voice: "朗读",
       ChatList: "Ir a la lista de chats",
       CompressedHistory: "Historial de memoria comprimido",
       Export: "Exportar todos los mensajes como Markdown",

@@ -34,6 +34,7 @@ const sk: PartialLocaleType = {
       },
     },
     Actions: {
+      Voice: "朗读",
       ChatList: "Prejsť na zoznam chatov",
       CompressedHistory: "Komprimovaná história výziev",
       Export: "Exportovať všetky správy ako Markdown",

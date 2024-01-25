@@ -34,6 +34,7 @@ import AutoIcon from "../icons/auto.svg";
 import BottomIcon from "../icons/bottom.svg";
 import StopIcon from "../icons/pause.svg";
 import RobotIcon from "../icons/robot.svg";
+import VoiceIcon from "../icons/voice.svg";
 
 import {
   ChatMessage,
@@ -54,6 +55,8 @@ import {
   autoGrowTextArea,
   useMobileScreen,
 } from "../utils";
+
+import { speakWord } from "../utils/speak";
 
 import dynamic from "next/dynamic";
 
@@ -1218,6 +1221,11 @@ function _Chat() {
                                 text={Locale.Chat.Actions.Copy}
                                 icon={<CopyIcon />}
                                 onClick={() => copyToClipboard(message.content)}
+                              />
+                              <ChatAction
+                                text={Locale.Chat.Actions.Voice}
+                                icon={<VoiceIcon />}
+                                onClick={() => speakWord(message.content)}
                               />
                             </>
                           )}

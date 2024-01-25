@@ -21,6 +21,7 @@ const bn: PartialLocaleType = {
   Chat: {
     SubTitle: (count: number) => `${count} টি বার্তা`,
     Actions: {
+      Voice: "朗读",
       ChatList: "চ্যাট তালিকায় যান",
       CompressedHistory: "সংক্ষিপ্ত ইতিহাস মেমোরি প্রম্পট",
       Export: "সমস্ত বার্তা মার্কডাউন হিসাবে রপ্তানি করুন",

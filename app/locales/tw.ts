@@ -12,6 +12,7 @@ const tw: PartialLocaleType = {
   Chat: {
     SubTitle: (count: number) => `您已經與 ChatGPT 進行了 ${count} 則對話`,
     Actions: {
+      Voice: "朗读",
       ChatList: "檢視訊息列表",
       CompressedHistory: "檢視壓縮後的歷史 Prompt",
       Export: "匯出聊天紀錄",

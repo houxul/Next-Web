@@ -21,6 +21,7 @@ const ar: PartialLocaleType = {
   Chat: {
     SubTitle: (count: number) => ` ${count} رسائل مع ChatGPT`,
     Actions: {
+      Voice: "朗读",
       ChatList: "الانتقال إلى قائمة الدردشة",
       CompressedHistory: "ملخص ضغط ذاكرة التاريخ",
       Export: "تصدير جميع الرسائل كـ Markdown",

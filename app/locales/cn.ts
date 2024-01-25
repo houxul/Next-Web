@@ -31,6 +31,7 @@ const cn = {
       },
     },
     Actions: {
+      Voice: "朗读",
       ChatList: "查看消息列表",
       CompressedHistory: "查看压缩后的历史 Prompt",
       Export: "导出聊天记录",

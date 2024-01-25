@@ -18,6 +18,7 @@ import { prettyObject } from "../utils/format";
 import { estimateTokenLength } from "../utils/token";
 import { nanoid } from "nanoid";
 import { createPersistStore } from "../utils/store";
+import { speakWord } from "../utils/speak";
 
 export type ChatMessage = RequestMessage & {
   date: string;
@@ -323,6 +324,7 @@ export const useChatStore = createPersistStore(
             });
           },
           onFinish(message) {
+            speakWord(message);
             botMessage.streaming = false;
             if (message) {
               botMessage.content = message;
