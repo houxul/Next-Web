@@ -32,6 +32,7 @@ const pt: PartialLocaleType = {
       },
     },
     Actions: {
+      Voice: "朗读",
       ChatList: "Ir Para Lista de Chat",
       CompressedHistory: "Prompt de Memória Histórica Comprimida",
       Export: "Exportar Todas as Mensagens como Markdown",

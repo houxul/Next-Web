@@ -14,6 +14,7 @@ const ko: PartialLocaleType = {
   Chat: {
     SubTitle: (count: number) => `ChatGPT와의 ${count}개의 메시지`,
     Actions: {
+      Voice: "朗读",
       ChatList: "채팅 목록으로 이동",
       CompressedHistory: "압축된 기억력 메모리 프롬프트",
       Export: "모든 메시지를 Markdown으로 내보내기",

@@ -13,6 +13,7 @@ const vi: PartialLocaleType = {
   Chat: {
     SubTitle: (count: number) => `${count} tin nhắn với ChatGPT`,
     Actions: {
+      Voice: "朗读",
       ChatList: "Xem danh sách chat",
       CompressedHistory: "Nén tin nhắn trong quá khứ",
       Export: "Xuất tất cả tin nhắn dưới dạng Markdown",

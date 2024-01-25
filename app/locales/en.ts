@@ -33,6 +33,7 @@ const en: LocaleType = {
       },
     },
     Actions: {
+      Voice: "朗读",
       ChatList: "Go To Chat List",
       CompressedHistory: "Compressed History Memory Prompt",
       Export: "Export All Messages as Markdown",
