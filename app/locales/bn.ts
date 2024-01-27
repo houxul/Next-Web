@@ -137,6 +137,7 @@ const bn: PartialLocaleType = {
       Title: "ফন্ট সাইজ",
       SubTitle: "চ্যাট সামগ্রীর ফন্ট সাইজ সংশোধন করুন",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "حقن تلميحات النظام",
       SubTitle:

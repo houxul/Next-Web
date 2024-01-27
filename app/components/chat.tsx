@@ -1225,7 +1225,12 @@ function _Chat() {
                               <ChatAction
                                 text={Locale.Chat.Actions.Voice}
                                 icon={<VoiceIcon />}
-                                onClick={() => speakWord(message.content)}
+                                onClick={() =>
+                                  speakWord(
+                                    message.content,
+                                    config.speakSpeed / 100,
+                                  )
+                                }
                               />
                             </>
                           )}

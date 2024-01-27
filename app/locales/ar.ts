@@ -112,6 +112,7 @@ const ar: PartialLocaleType = {
       Title: "حجم الخط",
       SubTitle: "ضبط حجم الخط لمحتوى الدردشة",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "حقن تلميحات النظام",
       SubTitle:

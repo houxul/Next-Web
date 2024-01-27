@@ -154,6 +154,7 @@ const en: LocaleType = {
       Title: "Font Size",
       SubTitle: "Adjust font size of chat content",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Inject System Prompts",
       SubTitle: "Inject a global system prompt for every request",

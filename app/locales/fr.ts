@@ -112,6 +112,7 @@ const fr: PartialLocaleType = {
       Title: "Taille des polices",
       SubTitle: "Ajuste la taille de police du contenu de la conversation",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Injecter des invites système",
       SubTitle:

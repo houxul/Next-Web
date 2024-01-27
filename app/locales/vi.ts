@@ -72,6 +72,7 @@ const vi: PartialLocaleType = {
       Title: "Font chữ",
       SubTitle: "Thay đổi font chữ của nội dung trò chuyện",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Tiêm Prompt Hệ thống",
       SubTitle:

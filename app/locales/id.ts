@@ -141,6 +141,7 @@ const id: PartialLocaleType = {
       Title: "Ukuran Font",
       SubTitle: "Ubah ukuran font konten chat",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Suntikkan Petunjuk Sistem",
       SubTitle:

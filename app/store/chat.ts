@@ -324,9 +324,9 @@ export const useChatStore = createPersistStore(
             });
           },
           onFinish(message) {
-            speakWord(message);
             botMessage.streaming = false;
             if (message) {
+              speakWord(message, useAppConfig.getState().speakSpeed / 100);
               botMessage.content = message;
               get().onNewMessage(botMessage);
             }

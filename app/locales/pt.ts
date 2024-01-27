@@ -154,6 +154,7 @@ const pt: PartialLocaleType = {
       Title: "Tamanho da Fonte",
       SubTitle: "Ajustar o tamanho da fonte do conteúdo do chat",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Inserir Prompts de Sistema",
       SubTitle: "Inserir um prompt de sistema global para cada requisição",

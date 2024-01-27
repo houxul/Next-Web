@@ -72,6 +72,7 @@ const it: PartialLocaleType = {
       Title: "Dimensione carattere",
       SubTitle: "Regolare la dimensione dei caratteri del contenuto della chat",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Inserisci Prompts di Sistema",
       SubTitle:
