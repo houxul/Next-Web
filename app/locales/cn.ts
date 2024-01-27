@@ -152,6 +152,7 @@ const cn = {
       Title: "字体大小",
       SubTitle: "聊天内容的字体大小",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "注入系统级提示信息",
       SubTitle: "强制给每次请求的消息列表开头添加一个模拟 ChatGPT 的系统提示",

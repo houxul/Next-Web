@@ -90,6 +90,7 @@ const jp: PartialLocaleType = {
       Title: "フォントサイズ",
       SubTitle: "チャット内容のフォントサイズ",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "システムプロンプトの挿入",
       SubTitle:

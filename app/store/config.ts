@@ -31,6 +31,7 @@ export const DEFAULT_CONFIG = {
   submitKey: isMacOS() ? SubmitKey.MetaEnter : SubmitKey.CtrlEnter,
   avatar: "1f603",
   fontSize: 14,
+  speakSpeed: 100,
   theme: Theme.Auto as Theme,
   tightBorder: !!getClientConfig()?.isApp,
   sendPreviewBubble: true,
@@ -55,7 +56,8 @@ export const DEFAULT_CONFIG = {
     sendMemory: true,
     historyMessageCount: 4,
     compressMessageLengthThreshold: 1000,
-    enableInjectSystemPrompts: true,
+    enableSpeakSpeed: "朗读语速",
+    InjectSystemPrompts: true,
     template: DEFAULT_INPUT_TEMPLATE,
   },
 };

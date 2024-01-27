@@ -156,6 +156,7 @@ const sk: PartialLocaleType = {
       Title: "Veľkosť písma",
       SubTitle: "Nastaviť veľkosť písma obsahu chatu",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Vložiť systémové výzvy",
       SubTitle: "Vložiť globálnu systémovú výzvu pre každú požiadavku",

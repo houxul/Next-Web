@@ -67,6 +67,7 @@ const no: PartialLocaleType = {
       Title: "Fontstørrelsen",
       SubTitle: "Juster fontstørrelsen for samtaleinnholdet.",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Sett inn systemprompter",
       SubTitle:

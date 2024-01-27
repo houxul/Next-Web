@@ -72,6 +72,7 @@ const tr: PartialLocaleType = {
       Title: "Yazı Boyutu",
       SubTitle: "Sohbet içeriğinin yazı boyutunu ayarlayın",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Sistem İpucu Ekleyin",
       SubTitle:

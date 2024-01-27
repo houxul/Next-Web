@@ -72,6 +72,7 @@ const cs: PartialLocaleType = {
       Title: "Velikost písma",
       SubTitle: "Nastavení velikosti písma obsahu chatu",
     },
+    SpeakSpeed: "朗读语速",
     InjectSystemPrompts: {
       Title: "Vložit systémové prompty",
       SubTitle:

@@ -794,6 +794,24 @@ export function Settings() {
             ></InputRange>
           </ListItem>
 
+          <ListItem title={Locale.Settings.SpeakSpeed}>
+            <InputRange
+              title={`${((config.speakSpeed ?? 100) / 100).toFixed(2)}`}
+              value={config.speakSpeed}
+              min="50"
+              max="150"
+              step="5"
+              onChange={(e) =>
+                updateConfig(
+                  (config) =>
+                    (config.speakSpeed = Number.parseInt(
+                      e.currentTarget.value,
+                    )),
+                )
+              }
+            ></InputRange>
+          </ListItem>
+
           <ListItem
             title={Locale.Settings.AutoGenerateTitle.Title}
             subTitle={Locale.Settings.AutoGenerateTitle.SubTitle}
