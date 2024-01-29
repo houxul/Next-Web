@@ -1,3 +1,9 @@
+var speaking = false;
+
+function sleep(milliseconds: number) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
 function isJSON(str: string): boolean {
   return str.includes("json");
 }
@@ -15,7 +21,13 @@ function splitSentence(longSentence: string) {
   return sentences;
 }
 
-export function speakWord(message: string, speed: number = 1) {
+export async function speakWord(message: string, speed: number = 1) {
+  if (speaking) {
+    speaking = false;
+    stopSpeak();
+    return;
+  }
+
   console.log("speakWord", message, speed);
   if (isJSON(message)) {
     return;
@@ -24,18 +36,35 @@ export function speakWord(message: string, speed: number = 1) {
     return;
   }
 
+  speaking = true;
   let sentences = splitSentence(message);
-  sentences.forEach((sentence, index) => {
-    setTimeout(() => {
-      speak(sentence, speed);
-    }, index * 300); // 每隔 0.3 秒读一个短句子
+  for (let sentence of sentences) {
+    await speak(sentence, speed);
+    if (!speaking) {
+      break;
+    }
+    await sleep(400);
+  }
+  speaking = false;
+}
+
+async function speak(message: string, speed: number = 1) {
+  return new Promise((resolve, reject) => {
+    var speech = new SpeechSynthesisUtterance();
+    speech.text = message;
+    speech.lang = "en-US"; // 设置语言为英语（美国）
+    speech.rate = speed; // 设置语速
+
+    speech.onend = function (event: any) {
+      resolve(undefined);
+    };
+    speech.onerror = function (event: any) {
+      reject(event.error);
+    };
+    window.speechSynthesis.speak(speech);
   });
 }
 
-function speak(message: string, speed: number = 1) {
-  var speech = new SpeechSynthesisUtterance();
-  speech.text = message;
-  speech.lang = "en-US"; // 设置语言为英语（美国）
-  speech.rate = speed; // 设置语速
-  window.speechSynthesis.speak(speech);
+function stopSpeak() {
+  window.speechSynthesis.cancel();
 }
