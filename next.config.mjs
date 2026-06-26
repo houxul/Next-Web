@@ -8,6 +8,7 @@ console.log("[Next] build with chunk: ", !disableChunk);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  ...(mode === "standalone" || mode === "export" ? { output: mode } : {}),
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -27,7 +28,6 @@ const nextConfig = {
     config.cache = false;
     return config;
   },
-  output: mode,
   images: {
     unoptimized: mode === "export",
   },
