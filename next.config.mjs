@@ -24,6 +24,7 @@ const nextConfig = {
       child_process: false,
     };
 
+    config.cache = false;
     return config;
   },
   output: mode,
