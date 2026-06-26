@@ -7,7 +7,7 @@
     "mask:watch": "npx watch \"yarn mask\" app/masks",
     "dev": "concurrently -r \"yarn run mask:watch\" \"next dev\"",
     "build": "yarn mask && cross-env BUILD_MODE=standalone next build",
-    "build:edgeone": "yarn mask && cross-env BUILD_MODE=edgeone next build",
+    "build:edgeone": "yarn mask && sh scripts/prune-for-edgeone.sh && cross-env BUILD_MODE=edgeone next build",
     "start": "next start",
     "lint": "next lint",
     "export": "yarn mask && cross-env BUILD_MODE=export BUILD_APP=1 next build",
@@ -88,8 +88,7 @@
     "ts-node": "^10.9.2",
     "tsx": "^4.16.0",
     "typescript": "5.2.2",
-    "watch": "^1.0.2",
-    "webpack": "^5.88.1"
+    "watch": "^1.0.2"
   },
   "resolutions": {
     "lint-staged/yaml": "^2.2.2"

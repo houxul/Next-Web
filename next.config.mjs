@@ -1,15 +1,35 @@
-import webpack from "webpack";
-
 const mode = process.env.BUILD_MODE ?? "standalone";
+const isEdgeone = mode === "edgeone";
 console.log("[Next] build mode", mode);
 
 const disableChunk = !!process.env.DISABLE_CHUNK || mode === "export";
 console.log("[Next] build with chunk: ", !disableChunk);
 
+const edgeoneTracingExcludes = {
+  "*": [
+    "node_modules/webpack/**/*",
+    "node_modules/@tauri-apps/**/*",
+    "node_modules/jest/**/*",
+    "node_modules/jest-environment-jsdom/**/*",
+    "node_modules/@testing-library/**/*",
+    "node_modules/eslint/**/*",
+    "node_modules/prettier/**/*",
+    "node_modules/typescript/**/*",
+    "node_modules/@types/**/*",
+    "node_modules/husky/**/*",
+    "node_modules/lint-staged/**/*",
+    "node_modules/caniuse-lite/**/*",
+    "./**/*.js.map",
+    "./**/*.mjs.map",
+    "./**/*.cjs.map",
+  ],
+};
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   ...(mode === "standalone" || mode === "export" ? { output: mode } : {}),
-  webpack(config) {
+  ...(isEdgeone ? { eslint: { ignoreDuringBuilds: true } } : {}),
+  webpack(config, { webpack }) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
@@ -22,10 +42,15 @@ const nextConfig = {
     }
 
     config.resolve.fallback = {
+      ...config.resolve.fallback,
       child_process: false,
+      bufferutil: false,
+      "utf-8-validate": false,
     };
 
-    config.cache = false;
+    if (!isEdgeone) {
+      config.cache = false;
+    }
     return config;
   },
   images: {
@@ -33,6 +58,7 @@ const nextConfig = {
   },
   experimental: {
     forceSwcTransforms: true,
+    ...(isEdgeone ? { outputFileTracingExcludes: edgeoneTracingExcludes } : {}),
   },
 };
 
